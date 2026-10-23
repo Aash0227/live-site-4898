@@ -1,0 +1,268 @@
+{
+ "registration": {
+  "what": "Where real features (Google mesh, Esri imagery) are relative to where the viewer puts the surveyed lot and the model. delta = google - survey in the viewer lot frame (u along the SE lot line toward El Camino Real, v toward Jordan Avenue).",
+  "features": {
+   "neighbour NW wall": {
+    "axis": "v",
+    "google": 2.106,
+    "survey": -0.064,
+    "rotationDeg": -0.429,
+    "rmsM": 0.048,
+    "n": 147,
+    "how": "half-roof-height crossing of the Google mesh, 205 transects along the SE lot line; survey: thick outline 0.2 ft outside the SE line (SU-3)",
+    "delta": 2.17
+   },
+   "neighbour NE end": {
+    "axis": "u",
+    "google": 43.415,
+    "survey": 43.729,
+    "n": 10,
+    "how": "half-roof-height crossing; survey: end of the thick neighbour outline (SU-3)",
+    "delta": -0.314
+   },
+   "neighbour SW end": {
+    "axis": "u",
+    "google": -3.368,
+    "survey": -0.687,
+    "n": 60,
+    "how": "half-roof-height crossing; survey: end of the thick neighbour outline (SU-3)",
+    "delta": -2.681
+   },
+   "Esri soil pad vs SU-3 broken edge (u)": {
+    "axis": "u",
+    "google": null,
+    "survey": null,
+    "delta": -0.7,
+    "how": "Esri World Imagery z19 (0.24 m/px) resampled into the lot frame; soil = R-B>18, R>70, G-B>5; IoU with the SU-3 broken-edge polygon over the lot; shadows on the pad lower the IoU, the NW edge dominates the v estimate"
+   },
+   "Esri soil pad vs SU-3 broken edge (v)": {
+    "axis": "v",
+    "google": null,
+    "survey": null,
+    "delta": 2.6,
+    "how": "Esri World Imagery z19 (0.24 m/px) resampled into the lot frame; soil = R-B>18, R>70, G-B>5; IoU with the SU-3 broken-edge polygon over the lot; shadows on the pad lower the IoU, the NW edge dominates the v estimate"
+   }
+  },
+  "estimate": {
+   "du": -0.7,
+   "dv": 2.385,
+   "sigmaU": 0.572,
+   "sigmaV": 0.319,
+   "method": "median of the per-feature deltas, sigma = 1.4826 MAD"
+  },
+  "proposedOffsetEN_m": [
+   -2.421,
+   0.564
+  ],
+  "proposedOffsetM": 2.486,
+  "rotationResidualDeg": -0.429,
+  "default": "not applied (switchable in the viewer: Site > \"Registration: shift to the photoreal mesh\")"
+ },
+ "checks": {
+  "footprintAreaM2": 739.27,
+  "iouWithBrokenEdgePolygonShifted": 0.754,
+  "footprintInsideViewerLot": 0.942,
+  "footprintInsideShiftedLot": 0.988,
+  "convexHullAreaM2": 853.85
+ },
+ "survey": {
+  "page": 95,
+  "scalePtPerFt": 4.5,
+  "lotDepthFt": 99.978,
+  "lotSELineFt": 190.0,
+  "neighbour": {
+   "clearM": 0.064,
+   "clearFt": 0.209,
+   "swEndU": -0.687,
+   "neEndU": 43.729,
+   "roofFt": {
+    "swPart": 110.8,
+    "nePart": 97.3
+   },
+   "label": "NEIGHBORING STRUCTURE, LANDS OF BALIWEED LLC APN 170-03-077 (0.2' CLEAR)"
+  },
+  "brokenEdgeOfPavement": {
+   "top_v": 30.376,
+   "left_u": 12.472,
+   "right_u": 42.578,
+   "bottomleft_v": 11.832,
+   "notchW_u": 18.195,
+   "notchTop_v": 16.595,
+   "notchE_u": 28.977,
+   "step_v": 8.217,
+   "legW_u": 35.135,
+   "bottom_v": 0.012,
+   "strokes": 647
+  },
+  "brokenEdgePolygonUV": [
+   [
+    12.472,
+    30.376
+   ],
+   [
+    42.578,
+    30.376
+   ],
+   [
+    42.578,
+    0.012
+   ],
+   [
+    35.135,
+    0.012
+   ],
+   [
+    35.135,
+    8.217
+   ],
+   [
+    28.977,
+    8.217
+   ],
+   [
+    28.977,
+    16.595
+   ],
+   [
+    18.195,
+    16.595
+   ],
+   [
+    18.195,
+    11.832
+   ],
+   [
+    12.472,
+    11.832
+   ]
+  ]
+ },
+ "capture": {
+  "when": "2026-10-21T17:18:30.203Z",
+  "half": 64,
+  "px": 1280,
+  "errorTarget": 4,
+  "calibration": {
+   "offset": 1.5118896833395183,
+   "samples": 152,
+   "spreadM": 35.544521802088326
+  },
+  "gl": {
+   "webgl": true,
+   "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+   "vendor": "Google Inc. (AMD)",
+   "renderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001636) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  }
+ },
+ "faces": {
+  "SW face u": {
+   "value": 10.907,
+   "spread": 0.128,
+   "n": 69,
+   "of": 70
+  },
+  "NE face (main roof) u": {
+   "value": 41.775,
+   "spread": 0.276,
+   "n": 30,
+   "of": 30
+  },
+  "NE face (low annex) u": {
+   "value": 41.193,
+   "spread": 0.177,
+   "n": 49,
+   "of": 50
+  },
+  "annex/main roof step u": {
+   "value": 39.029,
+   "spread": 0.229,
+   "n": 50,
+   "of": 50
+  },
+  "annex south end v": {
+   "value": 18.702,
+   "spread": 0.134,
+   "n": 7,
+   "of": 7
+  },
+  "NW face (main roof -> trees) v": {
+   "value": 31.384,
+   "spread": 0.504,
+   "n": 55,
+   "of": 60
+  },
+  "NW face (annex -> low strip) v": {
+   "value": 32.181,
+   "spread": 0.156,
+   "n": 22,
+   "of": 22
+  },
+  "courtyard north face v": {
+   "value": 11.681,
+   "spread": 0.053,
+   "n": 63,
+   "of": 70
+  },
+  "courtyard east face (leg) u": {
+   "value": 31.462,
+   "spread": 0.051,
+   "n": 29,
+   "of": 30
+  },
+  "leg / neighbour roof step v": {
+   "value": 1.558,
+   "spread": 0.117,
+   "n": 30,
+   "of": 31
+  },
+  "annex west end (NW strip) u": {
+   "value": 33.95,
+   "spread": null,
+   "n": 1,
+   "of": 1
+  }
+ },
+ "polygonLotFrameUV_m": [
+  [
+   10.657,
+   11.431
+  ],
+  [
+   31.212,
+   11.431
+  ],
+  [
+   31.212,
+   1.558
+  ],
+  [
+   42.025,
+   1.558
+  ],
+  [
+   42.025,
+   18.952
+  ],
+  [
+   41.443,
+   18.952
+  ],
+  [
+   41.443,
+   32.431
+  ],
+  [
+   33.7,
+   32.431
+  ],
+  [
+   33.7,
+   31.634
+  ],
+  [
+   10.657,
+   31.634
+  ]
+ ],
+ "maxHeightM": 7.89
+}

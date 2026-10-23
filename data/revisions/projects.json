@@ -1,0 +1,28 @@
+{
+ "schema": "lsv-projects/1",
+ "default": "vestibule",
+ "projects": [
+  {
+   "id": "vestibule",
+   "name": "Aron Terrace Apartment (Vestibule)",
+   "address": "4898 El Camino Real, Los Altos, CA 94022",
+   "index": "vestibule/index.json",
+   "published": "20261022-184931",
+   "publishedUtc": "2026-10-22T13:19:41Z",
+   "latest": "20261022-184931",
+   "revisions": 2,
+   "failed": 0
+  },
+  {
+   "id": "madera",
+   "name": "Sarkar Residence, 10510 Madera Dr",
+   "address": "10510 Madera Dr, Cupertino, CA 95014",
+   "index": "madera/index.json",
+   "published": null,
+   "publishedUtc": null,
+   "latest": null,
+   "revisions": 0,
+   "failed": 0
+  }
+ ]
+}

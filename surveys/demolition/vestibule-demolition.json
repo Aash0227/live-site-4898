@@ -1,0 +1,141 @@
+{
+ "schema": "lsv-demolition/1",
+ "project": "Aron Terrace Apartment, 4898 El Camino Real, Los Altos CA (APN 170-03-085)",
+ "frame": "viewer local frame: E,N metres from the revision origin (scene x = E, z = -N); polygon = where the building is in the Google Photorealistic mesh (unshifted); heights relative to the survey ground",
+ "generatedFrom": "surveys/demolition/vestibule-evidence.json (polygonLotFrameUV_m, measured by surveys/demolition/vestibule.py) converted with the lot frame of alignment.json",
+ "polygons": [
+  {
+   "id": "existing-building-1",
+   "name": "Existing one-storey commercial building on the lot (demolished per the drawings)",
+   "designation": [
+    {
+     "sheet": "C-2.0 Demolition Plan",
+     "pdfPage": 75,
+     "text": "ALL EXISTING BUILDINGS, STRUCTURES, AND ON-SITE IMPROVEMENTS ARE PROPOSED TO BE REMOVED; limits of demolition = the lot"
+    },
+    {
+     "sheet": "SU-3 ALTA/NSPS survey (2025-07-23, topo 2025-11-05)",
+     "pdfPage": 95,
+     "text": "no building on the lot any more: BROKEN EDGE OF PAVEMENT outlines the cleared pad; the adjoining NEIGHBORING STRUCTURE (Lands of Baliweed LLC, APN 170-03-077, 0.2 ft clear) is outside the limits of demolition and is kept"
+    }
+   ],
+   "method": "Google mesh height above the survey terrain (top-down capture, 0.1 m): each face located by a half-height crossing (median of transects); see vestibule-evidence.json faces",
+   "confidence": "designation: high (drawings + survey + imagery); faces +-0.15 m in the Google mesh frame",
+   "localEN_m": [
+    [
+     -6.791,
+     -14.24
+    ],
+    [
+     3.325,
+     3.653
+    ],
+    [
+     11.919,
+     -1.205
+    ],
+    [
+     17.241,
+     8.208
+    ],
+    [
+     2.099,
+     16.768
+    ],
+    [
+     1.812,
+     16.261
+    ],
+    [
+     -9.922,
+     22.894
+    ],
+    [
+     -13.732,
+     16.154
+    ],
+    [
+     -13.038,
+     15.761
+    ],
+    [
+     -24.378,
+     -4.298
+    ]
+   ],
+   "wgs84": [
+    [
+     37.3979278,
+     -122.10835366
+    ],
+    [
+     37.39808902,
+     -122.10823941
+    ],
+    [
+     37.39804525,
+     -122.10814236
+    ],
+    [
+     37.39813006,
+     -122.10808225
+    ],
+    [
+     37.39820719,
+     -122.10825326
+    ],
+    [
+     37.39820262,
+     -122.1082565
+    ],
+    [
+     37.39826238,
+     -122.10838902
+    ],
+    [
+     37.39820166,
+     -122.10843205
+    ],
+    [
+     37.39819811,
+     -122.10842421
+    ],
+    [
+     37.39801738,
+     -122.10855228
+    ]
+   ],
+   "areaM2": 739.27,
+   "maxHeightM": 7.89,
+   "partyWall": {
+    "a": [
+     11.919,
+     -1.205
+    ],
+    "b": [
+     17.241,
+     8.208
+    ],
+    "why": "the building abutted the neighbour along this edge; the neighbour wall behind it was never photographed"
+   }
+  }
+ ],
+ "fill": {
+  "color": "#9c8f7c",
+  "what": "cleared ground (graded soil pad), flat neutral colour, no texture (Esri imagery inside the pad shows the photo of the site, the Google texture is the old roof)",
+  "wallColor": "#b7b1a6"
+ },
+ "registration": {
+  "proposedShiftOfGoogleMeshEN_m": [
+   2.421,
+   -0.564
+  ],
+  "offsetM": 2.486,
+  "sigmaM": [
+   0.572,
+   0.319
+  ],
+  "rotationResidualDeg": -0.429,
+  "what": "Google mesh features minus survey positions, measured on 5 features (neighbour walls, ends, Esri pad); shifting the Google mesh by this vector aligns it to the survey frame. The survey frame (and the Revit model) is never moved."
+ }
+}

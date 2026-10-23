@@ -1,0 +1,25 @@
+{
+  "schema": "lsv-projects-config/1",
+  "default": "vestibule",
+  "projects": [
+    {
+      "id": "vestibule",
+      "name": "Aron Terrace Apartment (Vestibule)",
+      "address": "4898 El Camino Real, Los Altos, CA 94022",
+      "survey": "surveys/4898-el-camino-real.json",
+      "legacy": true,
+      "harnessProjectRoot": "C:\\4898_project\\astra_app\\4898-automation\\projects\\ARON_TERRACE",
+      "note": "legacy layout: its revisions stay directly in <revisions>/<revId>/ with index.json and published.json at the top, so older branches and the production viewer keep reading them; <revisions>/vestibule/index.json is a generated per-project view",
+      "demolition": "surveys/demolition/vestibule-demolition.json"
+    },
+    {
+      "id": "madera",
+      "name": "Sarkar Residence, 10510 Madera Dr",
+      "address": "10510 Madera Dr, Cupertino, CA 95014",
+      "survey": "surveys/10510-madera-dr.json",
+      "harnessProjectRoot": "C:\\4898_project\\QA-QC automation\\project\\MADERA",
+      "qaqcResult": "C:\\4898_project\\astra_app\\4898-automation\\4898\\autotest-runs\\20261013_164024\\evidence\\qaqc_qaqc_result.json",
+      "qaqcResultNote": "the in-Revit QA/QC run on the V2 detached copy (2026-10-13, 12 levels, 6 unloaded links): its PRESENT rows' element ids are the identity reference for hold downs, shear walls, columns and beams"
+    }
+  ]
+}

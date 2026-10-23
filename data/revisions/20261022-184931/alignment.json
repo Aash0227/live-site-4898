@@ -1,0 +1,308 @@
+{
+ "origin": {
+  "lat": 37.398056104063315,
+  "lon": -122.10827696415082,
+  "elevationM": 24.600242615,
+  "datum": "NAVD88 (USGS 3DEP)",
+  "what": "model footprint centre"
+ },
+ "anchor": {
+  "lat": 37.398088214639,
+  "lon": -122.108289404823,
+  "sharedFt": [
+   63.70048067959449,
+   44.14031543231941
+  ],
+  "mode": "building centre = lot centre (Esri World Geocoder (PointAddress, score 100): 4898 El Camino Real, Los Altos, California, 94022) + the civil-plan offset (-8.4, -8.9 ft in model axes, C-3.0); rotation from the surveyed lot bearing. The Revit Site Location is not used."
+ },
+ "internalToSharedFt": {
+  "A": [
+   [
+    0.4921070623611336,
+    -0.8705346857962039,
+    0.0
+   ],
+   [
+    0.8705346857962039,
+    0.4921070623611336,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "t": [
+   62.57515057900011,
+   -42.25457081798061,
+   0.0
+  ],
+  "how": "project-position probes",
+  "residualsFt": {
+   "projectBasePoint": 0.0,
+   "surveyPoint": 0.0
+  },
+  "rotationDeg": 60.52083299999999
+ },
+ "internalToLocalM": [
+  0.14999423260767353,
+  0.0,
+  -0.2653389722306829,
+  0.0,
+  -0.2653389722306829,
+  0.0,
+  -0.14999423260767353,
+  0.0,
+  0.0,
+  0.3048,
+  -0.0,
+  0.0,
+  -1.4445659136097875,
+  -0.01812261499999579,
+  22.769365292145416,
+  1.0
+ ],
+ "vertical": {
+  "mode": "FRIST FLOOR = 80.65 ft NAVD88 (civil plan C-3.0)",
+  "modelUpAtSharedZ0M": -0.01812261499999579,
+  "lvl1": "FRIST FLOOR",
+  "lvl1SharedM": -2.11860718881215e-16,
+  "terrainM": 24.600242615,
+  "footprintCornersM": [
+   24.997209549,
+   24.756536484,
+   24.15864563,
+   24.176332474
+  ]
+ },
+ "footprint": {
+  "rectAngleDeg": 60.64224645720873,
+  "rectWidthFt": 89.55438643954744,
+  "rectLengthFt": 169.3035480864437,
+  "centerFt": [
+   67.31454005934718,
+   32.44807121661721
+  ],
+  "zMinFt": -20.801198959350586,
+  "zMaxFt": 109.50369262695312
+ },
+ "geocode": [
+  {
+   "source": "Esri World Geocoder (PointAddress, score 100)",
+   "lat": 37.398088214639,
+   "lon": -122.108289404823,
+   "label": "4898 El Camino Real, Los Altos, California, 94022",
+   "precise": true
+  },
+  {
+   "source": "OpenStreetMap Nominatim (primary)",
+   "lat": 37.4009235,
+   "lon": -122.1127599,
+   "label": "West El Camino Real, Los Altos, Santa Clara County, California, 94022, United States",
+   "precise": false
+  }
+ ],
+ "lot": {
+  "cornersLocalEN_m": [
+   [
+    -2.084,
+    -29.143
+   ],
+   [
+    26.415,
+    21.271
+   ],
+   [
+    -0.119,
+    36.271
+   ],
+   [
+    -28.618,
+    -14.144
+   ]
+  ],
+  "sizeFt": [
+   190.0,
+   100.0
+  ],
+  "source": "SU-3: S29\u00b028'45\"W 190.00 ft along the south-east side and 100.00 ft along the street sides; 18,919 sq ft (the street corner at El Camino Real / Jordan Avenue is rounded, R=19.50 ft, so the rectangle slightly over-covers that corner)",
+  "bearing": "N29\u00b028'45\"E"
+ },
+ "survey": {
+  "project": "Aron Terrace Apartment, 4898 El Camino Real, Los Altos, CA 94022 (APN 170-03-085)",
+  "sources": [
+   {
+    "id": "SU-1..SU-4",
+    "pdfPages": [
+     93,
+     94,
+     95,
+     96
+    ],
+    "what": "ALTA/NSPS Land Title Survey, Lea & Braze Engineering, Inc., job 2250611, 2025-07-23: legal description, bearings, benchmark, spot grades"
+   },
+   {
+    "id": "C-1.0",
+    "pdfPages": [
+     74
+    ],
+    "what": "civil title sheet: City of Mountain View benchmark IV-03 80.401 ft NAVD88; site benchmark 79.13 ft"
+   },
+   {
+    "id": "C-3.0",
+    "pdfPages": [
+     76
+    ],
+    "what": "civil grading plan 1\"=10': building on the surveyed lot, first floor FF 80.65 ft, garage level slab 69.69 ft"
+   },
+   {
+    "id": "A1.0",
+    "pdfPages": [
+     15
+    ],
+    "what": "architectural site plan: plan orientation (Jordan Avenue at the top, El Camino Real on the right)"
+   }
+  ],
+  "lotBearing": {
+   "text": "N29\u00b028'45\"E",
+   "azimuthDeg": 29.479167,
+   "where": "Jordan Avenue south-east boundary of the lot and its opposite boundary S29\u00b028'45\"W 190.00 ft (SU-3, C-3.0); the lot is 190 ft x about 100 ft, 18,919 sq ft"
+  },
+  "firstFloor": {
+   "level": "FRIST FLOOR",
+   "ffeFt": 80.65,
+   "datum": "NAVD88",
+   "source": "C-3.0 '(N) BUILDING FIRST FLOOR FF: 80.65'"
+  },
+  "benchmarks": [
+   {
+    "name": "City of Mountain View benchmark IV-03 (bronze disk, NE return of Ortega Ave at El Camino Real)",
+    "elevationFt": 80.401,
+    "datum": "NAVD88"
+   },
+   {
+    "name": "Site benchmark, survey control point (cut cross in concrete curb)",
+    "elevationFt": 79.13,
+    "datum": "NAVD88"
+   }
+  ]
+ },
+ "terrain": {
+  "fine": {
+   "halfM": 240.0,
+   "n": 121
+  },
+  "coarse": {
+   "halfM": 1500.0,
+   "n": 151
+  }
+ },
+ "checks": [
+  {
+   "check": "Export integrity",
+   "status": "PASS",
+   "detail": "1085 elements, 233,878 triangles, 38 materials, geometry 6 MB"
+  },
+  {
+   "check": "Skipped-element audit",
+   "status": "PASS",
+   "detail": "2374 model elements not exported: category not physical: <Sketch> 1311; no solid or mesh geometry at any detail level 996; category not physical: Cameras 23; category not physical: Lines 18; curves / points only (no solid or mesh) 9; category not physical: Shaft Openings 8"
+  },
+  {
+   "check": "Internal -> shared transform",
+   "status": "PASS",
+   "detail": "from project-position probes; rotation internal->shared +0.0000 deg (true-north angle 0.0000 deg); base-point residuals PBP 0.0000 ft, SP 0.0000 ft"
+  },
+  {
+   "check": "Orientation vs survey bearing",
+   "status": "WARN",
+   "detail": "the model has no true north (+0.00 deg) but the surveyed lot bearing N29\u00b028'45\"E needs +60.52 deg; rotated by +60.52 deg about the footprint centre at publication (recorded here; the Revit model is unchanged). Jordan Avenue south-east boundary of the lot and its opposite boundary S29\u00b028'45\"W 190.00 ft (SU-3, C-3.0); the lot is 190 ft x about 100 ft, 18,919 sq ft. Model axes: +x along the lot's 190 ft side toward El Camino Real (north-east); +y toward Jordan Avenue (north-west)."
+  },
+  {
+   "check": "Source discrepancy",
+   "status": "WARN",
+   "detail": "The A1.0 north arrow reads about 21 degrees clockwise from sheet-up, but the survey bearing and the street geometry imply about 60.5 degrees for this plan orientation. The survey is used; the architect should correct A1.0 or explain it."
+  },
+  {
+   "check": "Not verified",
+   "status": "WARN",
+   "detail": "The survey's basis of bearings (record, true or CCS83 grid) was not read, so up to about 1 degree is possible between survey bearing and true north."
+  },
+  {
+   "check": "Not verified",
+   "status": "WARN",
+   "detail": "No monument or lot-corner coordinates exist in Revit's frame, so the horizontal tie is by lot centre and the civil plan, not by coordinates. Expected error: a few metres."
+  },
+  {
+   "check": "Not verified",
+   "status": "WARN",
+   "detail": "The footprint outline on C-3.0 (about 165 x 81 ft) is smaller than the exported Revit footprint (about 169 x 89 ft, which includes basement walls), so the offset above is approximate."
+  },
+  {
+   "check": "Footprint",
+   "status": "PASS",
+   "detail": "169.3 x 89.6 ft from 702 core elements; no outliers"
+  },
+  {
+   "check": "Georeference",
+   "status": "WARN",
+   "detail": "building centre = lot centre (Esri World Geocoder (PointAddress, score 100): 4898 El Camino Real, Los Altos, California, 94022) + the civil-plan offset (-8.4, -8.9 ft in model axes, C-3.0); rotation from the surveyed lot bearing. The Revit Site Location is not used. NOT survey-grade: no monument or lot-corner coordinates are tied to the Revit model; expect a few metres of error."
+  },
+  {
+   "check": "Building centre vs Esri World Geocoder",
+   "status": "INFO",
+   "detail": "3.7 m (4898 El Camino Real, Los Altos, California, 94022)"
+  },
+  {
+   "check": "Building centre vs OpenStreetMap Nominatim",
+   "status": "WARN",
+   "detail": "508.4 m (West El Camino Real, Los Altos, Santa Clara County, California, 94022, United States)"
+  },
+  {
+   "check": "Terrain source",
+   "status": "PASS",
+   "detail": "USGS 3DEP 24.60 m NAVD88 at the building centre; Terrarium z15 grid 24.90 m there, shifted by -0.30 m to match"
+  },
+  {
+   "check": "Vertical alignment",
+   "status": "PASS",
+   "detail": "FRIST FLOOR set to the surveyed first-floor elevation 80.65 ft (24.582 m) NAVD88 (C-3.0 '(N) BUILDING FIRST FLOOR FF: 80.65'); -0.02 m against the USGS ground at the building centre (24.60 m)"
+  },
+  {
+   "check": "Basement level vs civil garage slab",
+   "status": "PASS",
+   "detail": "BASEMENT -1 lands at 69.93 ft NAVD88; civil garage level slab 69.69 ft; difference +0.24 ft (C-3.0 'GARAGE LEVEL SLAB: 69.69\u00b1' (slab, so a little below the level line))"
+  },
+  {
+   "check": "Ground vs surveyed spot grades",
+   "status": "PASS",
+   "detail": "USGS ground 80.71 ft at the building centre; spot grades on the lot 79.90 to 81.16 ft NAVD88 (SU-3, C-3.0)"
+  },
+  {
+   "check": "Terrain across the footprint",
+   "status": "PASS",
+   "detail": "USGS corners 25.00, 24.76, 24.16, 24.18 m (range 0.84 m)"
+  },
+  {
+   "check": "Surroundings",
+   "status": "PASS",
+   "detail": "329 OpenStreetMap buildings within 450 m; 1 existing OSM building(s) on the project footprint hidden: #380862426"
+  },
+  {
+   "check": "Orientation vs street frontage",
+   "status": "PASS",
+   "detail": "model long side 60.6 deg, nearest street Jordan Avenue (27 m away) 60.7 deg from east: 0.1 deg off parallel/perpendicular. Checks rotation only (a 180 deg flip is not detectable this way). Independent of the survey bearing (OpenStreetMap geometry)."
+  },
+  {
+   "check": "Fragments conversion",
+   "status": "PASS",
+   "detail": "373 KB from a 2417 KB IFC in 1.9 s"
+  },
+  {
+   "check": "Fragments identity",
+   "status": "WARN",
+   "detail": "877 of 1085 exported elements have their IFC GlobalId in the IFC; without an IFC entity: {'Doors': 159, 'Windows': 43, 'Top Rails': 6}; categories with NO IFC entity: Doors, Top Rails, Windows"
+  }
+ ]
+}

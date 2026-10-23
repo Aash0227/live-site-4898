@@ -1,0 +1,26 @@
+{
+ "id": "20261021-184932",
+ "status": "validated",
+ "createdUtc": "2026-10-21T13:19:34Z",
+ "document": "Vestibule update",
+ "sourceModel": null,
+ "fragments": {
+  "bytes": 381913,
+  "seconds": 1.9,
+  "ifcBytes": 2473546,
+  "matched": 877,
+  "exported": 1085,
+  "withoutIfc": {
+   "Doors": 159,
+   "Windows": 43,
+   "Top Rails": 6
+  }
+ },
+ "sourceExport": "C:\\4898_project\\astra_app\\4898-automation\\4898-fragpoc\\autotest-runs\\20261021_182025\\site-export",
+ "exportedUtc": "2026-10-21T12:53:03Z",
+ "elements": 1085,
+ "triangles": 233878,
+ "warnings": 8,
+ "failures": 0,
+ "published": false
+}

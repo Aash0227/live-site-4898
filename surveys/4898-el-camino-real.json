@@ -1,0 +1,94 @@
+{
+  "project": "Aron Terrace Apartment, 4898 El Camino Real, Los Altos, CA 94022 (APN 170-03-085)",
+  "pdf": "C:/4898_project/El Camino Real_Permit Set_Revised_compressed.pdf",
+  "sources": [
+    {
+      "id": "SU-1..SU-4",
+      "pdfPages": [
+        93,
+        94,
+        95,
+        96
+      ],
+      "what": "ALTA/NSPS Land Title Survey, Lea & Braze Engineering, Inc., job 2250611, 2025-07-23: legal description, bearings, benchmark, spot grades"
+    },
+    {
+      "id": "C-1.0",
+      "pdfPages": [
+        74
+      ],
+      "what": "civil title sheet: City of Mountain View benchmark IV-03 80.401 ft NAVD88; site benchmark 79.13 ft"
+    },
+    {
+      "id": "C-3.0",
+      "pdfPages": [
+        76
+      ],
+      "what": "civil grading plan 1\"=10': building on the surveyed lot, first floor FF 80.65 ft, garage level slab 69.69 ft"
+    },
+    {
+      "id": "A1.0",
+      "pdfPages": [
+        15
+      ],
+      "what": "architectural site plan: plan orientation (Jordan Avenue at the top, El Camino Real on the right)"
+    }
+  ],
+  "lotBearing": {
+    "text": "N29°28'45\"E",
+    "azimuthDeg": 29.479167,
+    "where": "Jordan Avenue south-east boundary of the lot and its opposite boundary S29°28'45\"W 190.00 ft (SU-3, C-3.0); the lot is 190 ft x about 100 ft, 18,919 sq ft"
+  },
+  "modelAxes": {
+    "+x": "along the lot's 190 ft side toward El Camino Real (north-east)",
+    "+y": "toward Jordan Avenue (north-west)",
+    "basis": "plan orientation of the architectural site plan A1.0 and of the civil plan C-3.0 (Jordan Avenue at the top, El Camino Real on the right), and the survey legal description (El Camino Real is the lot's north-east side, Jordan Avenue its north-west side); stair positions in the model match A1.0"
+  },
+  "firstFloor": {
+    "level": "FRIST FLOOR",
+    "ffeFt": 80.65,
+    "datum": "NAVD88",
+    "source": "C-3.0 '(N) BUILDING FIRST FLOOR FF: 80.65'"
+  },
+  "garageSlab": {
+    "level": "BASEMENT -1",
+    "elevationFt": 69.69,
+    "datum": "NAVD88",
+    "source": "C-3.0 'GARAGE LEVEL SLAB: 69.69±' (slab, so a little below the level line)"
+  },
+  "benchmarks": [
+    {
+      "name": "City of Mountain View benchmark IV-03 (bronze disk, NE return of Ortega Ave at El Camino Real)",
+      "elevationFt": 80.401,
+      "datum": "NAVD88"
+    },
+    {
+      "name": "Site benchmark, survey control point (cut cross in concrete curb)",
+      "elevationFt": 79.13,
+      "datum": "NAVD88"
+    }
+  ],
+  "lotSpotGradeRangeFt": [
+    79.9,
+    81.16
+  ],
+  "lotCentre": "the Esri World Geocoder PointAddress for 4898 El Camino Real. Checked against OSM: the Jordan Avenue south-east boundary lies 53 ft from it where a centred 100 ft lot predicts 50 ft",
+  "buildingCentreOffsetFromLotCentreFt": {
+    "x": -8.4,
+    "y": -8.9,
+    "how": "measured graphically on C-3.0 (1\"=10') between the centre of the dashed building outline and the centre of the 190 ft x 100 ft lot, in model axes; about 1.5 ft"
+  },
+  "discrepancies": [
+    "The A1.0 north arrow reads about 21 degrees clockwise from sheet-up, but the survey bearing and the street geometry imply about 60.5 degrees for this plan orientation. The survey is used; the architect should correct A1.0 or explain it."
+  ],
+  "notVerified": [
+    "The survey's basis of bearings (record, true or CCS83 grid) was not read, so up to about 1 degree is possible between survey bearing and true north.",
+    "No monument or lot-corner coordinates exist in Revit's frame, so the horizontal tie is by lot centre and the civil plan, not by coordinates. Expected error: a few metres.",
+    "The footprint outline on C-3.0 (about 165 x 81 ft) is smaller than the exported Revit footprint (about 169 x 89 ft, which includes basement walls), so the offset above is approximate."
+  ],
+  "lotSizeFt": [
+    190.0,
+    100.0
+  ],
+  "lotSizeNote": "SU-3: S29°28'45\"W 190.00 ft along the south-east side and 100.00 ft along the street sides; 18,919 sq ft (the street corner at El Camino Real / Jordan Avenue is rounded, R=19.50 ft, so the rectangle slightly over-covers that corner)"
+}

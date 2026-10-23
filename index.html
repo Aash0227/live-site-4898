@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fragments + 3D Tiles PoC</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0d1016; color: #e7e9ee; font: 12px/1.4 system-ui, sans-serif; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: 100vh; }
+  #hud { position: fixed; left: 8px; top: 8px; max-width: 46ch; background: rgba(14, 17, 23, .86); padding: 8px 10px; border: 1px solid #2a2f3a; border-radius: 6px; white-space: pre-wrap; }
+  #sel { position: fixed; right: 8px; top: 8px; max-width: 46ch; background: rgba(14, 17, 23, .86); padding: 8px 10px; border: 1px solid #2a2f3a; border-radius: 6px; white-space: pre-wrap; display: none; }
+</style>
+</head>
+<body>
+<div id="hud">starting...</div>
+<div id="sel"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

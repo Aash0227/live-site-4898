@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:,">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live-Site Viewer (Fragments)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" tabindex="0"></canvas>
+
+<header id="bar">
+  <button class="icon only-narrow" id="tglLeft" title="Model and site panel">☰</button>
+  <div class="brand">Live-Site Viewer · Fragments</div>
+  <div class="doc" id="docName">—</div>
+  <select id="projSel" title="Project"></select>
+  <select id="revSel" title="Revision"></select>
+  <span class="chip" id="revChip">loading</span>
+  <div class="spacer"></div>
+  <div class="tools">
+    <button id="bFit" title="Fit the model (F)">Fit</button>
+    <button id="bTop" title="Top view (T)">Top</button>
+    <button id="bIso" title="3D view (3)">3D</button>
+    <span class="sep"></span>
+    <button id="bHide" title="Hide the selection (H)" disabled>Hide</button>
+    <button id="bIsolate" title="Isolate the selection (I)" disabled>Isolate</button>
+    <button id="bShow" title="Show everything (Esc)">Show all</button>
+  </div>
+  <button class="icon only-narrow" id="tglRight" title="Properties">ⓘ</button>
+</header>
+
+<aside id="left" class="panel">
+  <nav class="tabs">
+    <button data-tab="model" class="on">Model</button>
+    <button data-tab="site">Site</button>
+    <button data-tab="audit">Audit</button>
+    <button data-tab="drawings" id="tabDrawings">Drawings</button>
+  </nav>
+  <section data-pane="model" class="pane on">
+    <input id="search" type="search" placeholder="ElementId or UniqueId…" autocomplete="off">
+    <div class="grp"><div class="grp-h"><span>Display</span></div>
+      <label class="row">Mode <select id="modeSel" title="Realistic: the Revit materials; Engineering: one colour per category"><option value="realistic">Realistic</option><option value="engineering">Engineering</option></select></label>
+      <label class="row"><input type="checkbox" id="optEdges" checked> Edges</label>
+      <label class="row"><input type="checkbox" id="optShadows" checked> Sun shadows (site only)</label>
+      <label class="row"><input type="checkbox" id="optAO"> Contact shading (AO, slower)</label>
+      <div id="legend" class="list legend"></div>
+    </div>
+    <div class="grp"><div class="grp-h"><span>Categories</span><span class="links"><a data-all="cat">all</a> · <a data-none="cat">none</a></span></div><div id="cats" class="list"></div></div>
+    <div class="grp"><div class="grp-h"><span>Levels</span><span class="links"><a data-all="lvl">all</a> · <a data-none="lvl">none</a></span></div><div id="lvls" class="list"></div></div>
+    <div class="muted small" id="visCount"></div>
+  </section>
+  <section data-pane="site" class="pane">
+    <div id="siteInfo" class="kv"></div>
+    <div class="grp"><div class="grp-h"><span>Display</span></div>
+      <label class="row"><input type="checkbox" id="optImagery" checked> Satellite imagery + terrain</label>
+      <label class="row"><input type="checkbox" id="optSurround" checked> Surrounding buildings (OSM)</label>
+      <label class="row"><input type="checkbox" id="optPhoto"> Photorealistic 3D (Google via Cesium ion)</label>
+      <label class="row"><input type="checkbox" id="optCut" checked> Show the site after demolition (removes the existing building, visual only)</label>
+      <label class="row demo-only"><input type="checkbox" id="optDemoOutline"> Demolition footprint outline</label>
+      <label class="row demo-only"><input type="checkbox" id="optAlign" checked> <span id="optAlignLbl">Align Google mesh to the survey</span></label>
+      <div id="photoNote" class="muted small"></div>
+      <label class="row"><input type="checkbox" id="optLot" checked> Surveyed lot outline (SU-3)</label>
+      <label class="row"><input type="checkbox" id="optProxy" checked> Door and window proxies</label>
+      <label class="row"><input type="checkbox" id="optSection"> Section plane</label>
+      <label class="row col">Height: <span id="secLbl"></span><input type="range" id="secH" min="-8" max="36" step="0.25" value="14"></label>
+    </div>
+    <div class="grp"><div class="grp-h"><span>Alignment checks</span></div><div id="checks"></div></div>
+  </section>
+  <section data-pane="audit" class="pane"><div id="audit" class="muted">loading…</div></section>
+  <section data-pane="drawings" class="pane"><div id="drawings" class="muted">loading…</div></section>
+</aside>
+
+<aside id="right" class="panel">
+  <div id="props"><div class="empty">Click an element to see its Revit identity and parameters.<br><br><kbd>H</kbd> hide · <kbd>I</kbd> isolate · <kbd>Esc</kbd> show all · double-click to focus</div></div>
+</aside>
+
+<div id="loader">
+  <div class="card">
+    <div class="ltitle">Loading revision</div>
+    <div class="bar"><div id="lbar"></div></div>
+    <div id="lstep" class="muted small">starting…</div>
+  </div>
+</div>
+<div id="toast"></div>
+<footer id="attr">Imagery © Esri, Maxar, Earthstar Geographics · Terrain: Re:Earth / Mapterhorn, EGM2008 · Buildings © OpenStreetMap contributors</footer>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
