@@ -6,12 +6,12 @@ laptop. When the user says "set this up", "install", or similar, do exactly this
 ## Setup (run from this repo's folder)
 1. Check prerequisites and report what is missing (do not install system software without asking the user):
    Revit 2023 (`C:\Program Files\Autodesk\Revit 2023\Revit.exe`), Node.js 20+ (`node --version`), Python 3.11+ (`python --version`),
-   GitHub CLI logged in (`gh auth status`). Revit must be CLOSED for the add-in install.
-2. Ask the user for their Cesium ion access token (optional; enables the Google photorealistic 3D layer). Never print it, never
+   Revit must be CLOSED for the add-in install.
+2. Ask the user for the office `.env` file (it holds `VITE_CESIUM_ION_TOKEN`; never commit it) or their own Cesium ion access token (optional; enables the Google photorealistic 3D layer). Never print it, never
    commit it, never put it in a URL. Free tokens: https://ion.cesium.com -> Access Tokens (scope assets:read); add "Google
    Photorealistic 3D Tiles" (asset 2275207) to My Assets. The Community plan is NON-COMMERCIAL.
-3. Run: `powershell -NoProfile -ExecutionPolicy Bypass -File setup.ps1 -CesiumToken <token>` (omit `-CesiumToken` if none).
-   It installs numpy/pillow/pymupdf, downloads + installs the add-in from this repo's GitHub release (one-file installer,
+3. Run: `powershell -NoProfile -ExecutionPolicy Bypass -File setup.ps1 -EnvFile <path to the office .env>` (or `-CesiumToken <token>`; omit both if none).
+   It installs numpy/pillow/pymupdf, downloads + installs the add-in from this repo's public GitHub release (one-file installer,
    per user, no admin), runs `npm ci` + `npm run build`, writes `%LOCALAPPDATA%\4898\LiveSite\settings.json` pointing the add-in at
    this repo, starts `python serve.py --port 8780` and opens http://127.0.0.1:8780/viewer/?project=vestibule.
 4. Verify: the page loads (top bar shows "Aron Terrace Apartment (Vestibule)" and a published revision); with a token the Site tab's
